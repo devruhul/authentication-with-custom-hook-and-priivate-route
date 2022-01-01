@@ -4,17 +4,22 @@ import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Register from './components/Register/Register';
 import LogIn from './components/LogIn/LogIn.js';
+import AuthProvider from './context/AuthProvider';
+import Shipping from './components/Shipping/Shipping';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="home" element={<Home />} />
-        <Route path="register" element={<Register />} />
-        <Route path="login" element={<LogIn />} />
-      </Routes>
+      <AuthProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<LogIn />} />
+          <Route path="/shipping" element={<Shipping />} />
+        </Routes>
+      </AuthProvider>
     </div>
   );
 }
