@@ -1,23 +1,22 @@
 import React from 'react';
-import { Route, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
-const PrivateRoute = ({ children, ...rest }) => {
+const PrivateRoute = ({ children }) => {
 
     const { user } = useAuth()
 
     return (
-        <Route
-            {...rest}
-            render={() => user.email ? children:
-                <Navigate
-                    to="/login"
-                >
-                </Navigate>
-            }
-        >
-        </Route>
+           user.email ? children : <Navigate
+                to={{
+                    pathname: "/login"
+                }}
+            >
+
+            </Navigate>
+
     );
+
 };
 
 export default PrivateRoute;
