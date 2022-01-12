@@ -7,7 +7,7 @@ const Home = () => {
         <div>
             <h2>This is home</h2>
             <h1>user : {user.displayName}</h1>
-            <img src={user.photoURL} alt="" />
+            <img src={user.photoURL} alt="user-avatar" />
         </div>
     );
 };
