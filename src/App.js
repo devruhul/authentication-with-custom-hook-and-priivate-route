@@ -6,7 +6,8 @@ import Register from './components/Register/Register';
 import LogIn from './components/LogIn/LogIn.js';
 import AuthProvider from './context/AuthProvider';
 import Shipping from './components/Shipping/Shipping';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PrivateOutlet from './components/PrivateOutlet/PrivateOutlet';
 
 function App() {
   return (
@@ -16,16 +17,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
-          <Route path="register" element={<Register />} />
           <Route path="login" element={<LogIn />} />
-          <Route
+          <Route path="/*" element={<PrivateOutlet />}>
+            <Route path="shipping" element={<Shipping />} />
+            <Route path="register" element={<Register />} />
+          </Route>
+          {/* <Route
             path="shipping"
             element=
             {<PrivateRoute>
               <Shipping />
             </PrivateRoute>
             }
-          />
+          /> */}
         </Routes>
       </AuthProvider>
     </div>
