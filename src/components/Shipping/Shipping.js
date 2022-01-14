@@ -5,7 +5,6 @@ const Shipping = () => {
 
     return (
         <div>
-            
             <h2>this is shipping</h2>
         </div>
     );
