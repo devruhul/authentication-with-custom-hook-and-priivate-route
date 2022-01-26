@@ -1,8 +1,13 @@
 import React from 'react';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 import useAuth from './../../hooks/useAuth'
 
 const Home = () => {
+
+    useDocumentTitle('Home title 👻')
+
     const { user } = useAuth()
+
     return (
         <div>
             <h2>This is home</h2>

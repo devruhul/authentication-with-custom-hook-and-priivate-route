@@ -9,7 +9,10 @@ import Shipping from './components/Shipping/Shipping';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PrivateOutlet from './components/PrivateOutlet/PrivateOutlet';
 
+
+
 function App() {
+
   return (
     <div className="App">
       <AuthProvider>

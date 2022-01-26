@@ -1,7 +1,10 @@
 import React from 'react';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 
 const Shipping = () => {
+
+    useDocumentTitle('Shipping')
 
     return (
         <div>

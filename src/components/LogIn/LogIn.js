@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, useLocation,useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 
 const LogIn = () => {
@@ -15,6 +16,8 @@ const LogIn = () => {
                 navigate(redirect_uri)
             })
     }
+
+    useDocumentTitle('Login')
 
     return (
         <div>

@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Register = () => {
+
+    useDocumentTitle('Register')
+
     return (
         <div>
             <h2> Please Register</h2>
