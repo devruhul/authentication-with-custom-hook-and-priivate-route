@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
+// import useDocumentTitle from '../../hooks/useDocumentTitle';
+import Page from '../Page/Page';
 
 
 const LogIn = () => {
@@ -17,10 +18,11 @@ const LogIn = () => {
             })
     }
 
-    useDocumentTitle('Login')
+    // useDocumentTitle('Login')
 
     return (
         <div>
+            <Page  title='Login' />
             <h2>This is login</h2>
             <button onClick={handleGoogleLogin}>Google sign in</button>
             <br />

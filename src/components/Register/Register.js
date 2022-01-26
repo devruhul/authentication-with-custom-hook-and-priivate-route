@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
+// import useDocumentTitle from '../../hooks/useDocumentTitle';
+import Page from '../Page/Page';
 
 const Register = () => {
 
-    useDocumentTitle('Register')
+    // useDocumentTitle('Register')
 
     return (
         <div>
+            <Page title='Register' />
+
             <h2> Please Register</h2>
             <form >
                 <label htmlFor="email">Email : </label>
