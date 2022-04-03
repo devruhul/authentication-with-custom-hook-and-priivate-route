@@ -15,6 +15,9 @@ const LogIn = () => {
         handleGoogleSignIn()
             .then(result => {
                 navigate(redirect_uri)
+                const storageuserInfo = localStorage.setItem("user", JSON.stringify(result.user))
+
+                console.log(storageuserInfo)
             })
     }
 
@@ -24,7 +27,7 @@ const LogIn = () => {
         <div>
             <Page title='Login' />
             {user?.email ? <h2>Please Logout </h2> : <h2>Please Login</h2>}
-           
+
             {
                 user?.email ? [] : <button onClick={handleGoogleLogin}>Google sign in</button>
 

@@ -7,6 +7,10 @@ const Shipping = () => {
 
     // useDocumentTitle('Shipping')
 
+    const user = JSON.parse(localStorage.getItem("user"))
+    console.log(user)
+ 
+
     return (
         <div>
             <Page title='Shipping' />
