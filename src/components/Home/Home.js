@@ -15,8 +15,8 @@ const Home = () => {
             <Page title='Home' />
 
             <h2>This is home</h2>
-            <h1>user : {user.displayName}</h1>
-            <img src={user.photoURL} alt="user-avatar" />
+            <h1>user : {user?.displayName}</h1>
+            <img src={user?.photoURL} alt="user-avatar" />
         </div>
     );
 };

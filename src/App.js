@@ -19,9 +19,6 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="login" element={<LogIn />} />
           <Route path="register" element={<Register />} />
-          <Route path="/*" element={<PrivateOutlet />}>
-            <Route path="shipping" element={<Shipping />} />
-          </Route>
           <Route
             path="shipping"
             element=
@@ -30,6 +27,9 @@ function App() {
             </PrivateRoute>
             }
           />
+          <Route path="/*" element={<PrivateOutlet />}>
+            <Route path="shipping" element={<Shipping />} />
+          </Route>
         </Routes>
       </AuthProvider>
     </div>
