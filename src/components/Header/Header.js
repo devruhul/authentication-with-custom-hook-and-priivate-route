@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import './Header.css'
 
 const Header = () => {
-    const { user, signout } = useAuth()
+    const { user, userLogout } = useAuth()
     return (
         <div>
             <Link to="home">Home</Link>
@@ -12,7 +12,7 @@ const Header = () => {
             <Link to="register">Register</Link>
             <Link to="login">Log In</Link>
             <span> {user.displayName} </span>
-            {user?.email && <button onClick={signout}>Log Out</button>}
+            {user?.email && <button onClick={userLogout}>Log Out</button>}
         </div>
     );
 };

@@ -6,18 +6,16 @@ import Page from '../Page/Page';
 
 
 const LogIn = () => {
-    const { handleGoogleSignIn, user } = useAuth()
+    const { handleGoogleSignIn, user, setError } = useAuth()
     const location = useLocation()
     const navigate = useNavigate()
-    const redirect_uri = location.state?.from || "/home"
+    const redirect_uri = location?.state?.from || "/home"
 
     const handleGoogleLogin = () => {
         handleGoogleSignIn()
-            .then(result => {
+            .then(userCredential => {
                 navigate(redirect_uri)
-                const storageuserInfo = localStorage.setItem("user", JSON.stringify(result.user))
-
-                console.log(storageuserInfo)
+                setError('')
             })
     }
 
